@@ -1,4 +1,6 @@
 # checkout https://www.neilwithdata.com/django-sql-logging
+DEBUG = True
+
 LOGGING = {
     'version': 1,
     'filters': {
@@ -20,3 +22,6 @@ LOGGING = {
         }
     }
 }
+
+AWS_ACCESS_KEY_ID = 'ID'
+AWS_SECRET_ACCESS_KEY = 'KEY'

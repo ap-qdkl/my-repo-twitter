@@ -4,6 +4,7 @@ from testing.testcases import TestCase
 from tweets.models import Tweet, TweetPhoto
 from utils.paginations import EndlessPagination
 
+
 # 注意要加 '/' 结尾，要不然会产生 301 redirect
 TWEET_LIST_API = '/api/tweets/'
 TWEET_CREATE_API = '/api/tweets/'
@@ -13,6 +14,7 @@ TWEET_RETRIEVE_API = '/api/tweets/{}/'
 class TweetApiTests(TestCase):
 
     def setUp(self):
+        self.clear_cache()
         self.user1 = self.create_user('user1', 'user1@jiuzhang.com')
         self.tweets1 = [
             self.create_tweet(self.user1)
